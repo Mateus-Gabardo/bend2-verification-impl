@@ -1,0 +1,4 @@
+$ bend sold_out_p2.bend    # build/v0
+ALL PROOFS CHECK
+Use --verdict for mathematical validity.
+exit=0

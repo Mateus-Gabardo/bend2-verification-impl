@@ -3,7 +3,7 @@
 # main.bend ou PROOF.bend (inclusive na versão gerada pela LLM).
 
 import Base
-import ./main.bend as R
+import ./src/stock.bend as Stock
 
 # Distinct(a, b): Unit quando a e b são naturais diferentes, Empty quando iguais
 def Distinct(a: Nat, b: Nat) -> Data:
@@ -18,29 +18,29 @@ def Distinct(a: Nat, b: Nat) -> Data:
       Distinct(a1, b1)
 
 # Absent(i, xs): nenhum produto de xs tem o identificador i
-def Absent(i: Nat, xs: List<&2, R.Product>) -> Type:
+def Absent(i: Nat, xs: List<&2, Stock.Product>) -> Type:
   match xs:
     case Nil{}:
       Unit
-    case R.Product{j, a, h} <> t:
+    case Stock.Product{j, a, h} <> t:
       (Distinct(j, i) & Absent(i, t))
 
 # soma de disponível e reservado de todos os produtos da lista
-def total(xs: List<&2, R.Product>) -> Nat:
+def total(xs: List<&2, Stock.Product>) -> Nat:
   match xs:
     case Nil{}:
       0n
-    case R.Product{j, a, h} <> t:
+    case Stock.Product{j, a, h} <> t:
       Nat.add(Nat.add(a, h), total(t))
 
 # o estoque devolvido, seja a reserva aceita ou recusada
-def stock_of(r: R.Outcome) -> List<&2, R.Product>:
+def stock_of(r: Stock.Outcome) -> List<&2, Stock.Product>:
   match r:
-    case R.Accepted{s}:
+    case Stock.Accepted{s}:
       s
-    case R.Refused{s}:
+    case Stock.Refused{s}:
       s
 
 # estoque de exemplo usado pelos testes unitários
-def sample() -> List<&2, R.Product>:
-  [R.Product{7n, 10n, 2n}, R.Product{8n, 5n, 0n}]
+def sample() -> List<&2, Stock.Product>:
+  [Stock.Product{7n, 10n, 2n}, Stock.Product{8n, 5n, 0n}]

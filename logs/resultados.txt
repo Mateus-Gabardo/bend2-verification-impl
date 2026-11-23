@@ -1,0 +1,11 @@
+v0         main.bend          src/stock.Accepted{[src/stock.Product{7n, 7n, 5n}, src/stock.Product{8n, 5n, 0n}]}
+v0         PROOF.bend         ALL PROOFS CHECK
+v0         blind_spot.bend    ALL PROOFS CHECK
+v0         sold_out_p1.bend   ALL PROOFS CHECK
+v0         sold_out_p2.bend   ALL PROOFS CHECK
+v1         main.bend          src/stock.Accepted{[src/stock.Product{7n, 7n, 5n}, src/stock.Product{8n, 5n, 0n}]}
+v1         PROOF.bend         SOME PROOFS FAIL
+v1-adapt   PROOF.bend         SOME PROOFS FAIL
+v1         blind_spot.bend    ALL PROOFS CHECK
+v1         sold_out_p1.bend   SOME PROOFS FAIL
+v1         sold_out_p2.bend   SOME PROOFS FAIL

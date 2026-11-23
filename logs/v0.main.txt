@@ -1,0 +1,3 @@
+$ bend main.bend    # build/v0
+src/stock.Accepted{[src/stock.Product{7n, 7n, 5n}, src/stock.Product{8n, 5n, 0n}]}
+exit=0
