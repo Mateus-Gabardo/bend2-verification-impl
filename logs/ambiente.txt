@@ -1,0 +1,5 @@
+2026-11-22T22:22:55-03:00
+bend 2.0.40
+Linux Gabardo 6.18.58.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Tue Oct 27 00:24:11 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+Ubuntu 22.04.4 LTS
+/bin/bash: line 1: clang: command not found

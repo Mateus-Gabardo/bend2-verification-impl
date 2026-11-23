@@ -1,0 +1,9 @@
+# cópias locais de documentação de terceiros (regeneráveis; ver README)
+docs/
+
+# saídas de compilação
+*.c
+*.js
+*.mjs
+*.bendtt
+*.gpu
