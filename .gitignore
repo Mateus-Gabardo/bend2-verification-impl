@@ -8,3 +8,7 @@
 
 # versões montadas por scripts/run_all.sh (temporárias)
 build/
+
+# anotações de trabalho: não fazem parte do repositório
+ARTIGO_PLANO.md
+CARACTERISTICAS_FUNCIONAIS.md

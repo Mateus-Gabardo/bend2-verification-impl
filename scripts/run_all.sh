@@ -46,6 +46,7 @@ for d in v0 v1; do
   run $d main.bend
   run $d PROOF.bend
   [ $d = v1 ] && run v1-adapt PROOF.bend
+  run $d unit_tests.bend
   run $d blind_spot.bend
   run $d sold_out_p1.bend
   run $d sold_out_p2.bend
