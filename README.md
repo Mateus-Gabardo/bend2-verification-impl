@@ -37,6 +37,15 @@ diff v0/PROOF.bend v1/PROOF.bend             # as provas de P1 e P2, retiradas n
 quando uma reserva deixa o produto com zero disponível, ele é removido da
 lista, e as unidades reservadas somem junto.
 
+## Executar no navegador (Google Colab)
+
+Não precisa instalar nada: os notebooks instalam o Bend numa máquina do Google.
+
+| Notebook | Para quê | |
+|---|---|---|
+| `playground.ipynb` | versão simplificada: o código Bend fica nas células para alterar e executar na hora | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mateus-Gabardo/bend2-verification-impl/blob/main/playground.ipynb) |
+| `colab.ipynb` | roteiro completo do estudo, com as provas de todas as leis | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mateus-Gabardo/bend2-verification-impl/blob/main/colab.ipynb) |
+
 ## Como executar
 
 Instale o Bend 2 (Linux, macOS ou WSL):
