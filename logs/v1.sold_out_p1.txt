@@ -1,12 +1,12 @@
-$ bend sold_out_p1.bend    # build/v1
+$ bend sold_out_p1.bend    # pasta v1
 SOME PROOFS FAIL
 Error:
 - expected : Stock.Accepted{[Stock.Product{8n, 5n, 0n}]}
 - observed : Stock.Accepted{[Stock.Product{7n, 0n, 5n}, Stock.Product{8n, 5n, 0n}]}
 Location: sold_out_p1
-18 | def sold_out_p1():
-19>|   {==}
+13 | def sold_out_p1():
+14>|   {==}
    |   ^^^^
-20 | 
+15 | 
 Note: the left side of the equality is the expected, the right side is the observed.
 exit=1

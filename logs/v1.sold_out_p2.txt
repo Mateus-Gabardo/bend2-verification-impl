@@ -1,12 +1,12 @@
-$ bend sold_out_p2.bend    # build/v1
+$ bend sold_out_p2.bend    # pasta v1
 SOME PROOFS FAIL
 Error:
 - expected : 5n
 - observed : 10n
 Location: sold_out_p2
-19 | def sold_out_p2():
-20>|   {==}
+12 | def sold_out_p2():
+13>|   {==}
    |   ^^^^
-21 | 
+14 | 
 Note: the left side of the equality is the expected, the right side is the observed.
 exit=1

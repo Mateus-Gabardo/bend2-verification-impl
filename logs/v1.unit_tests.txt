@@ -1,4 +1,4 @@
-$ bend unit_tests.bend    # build/v1
+$ bend unit_tests.bend    # pasta v1
 ALL PROOFS CHECK
 Use --verdict for mathematical validity.
 exit=0

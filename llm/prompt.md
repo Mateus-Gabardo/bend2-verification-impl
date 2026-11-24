@@ -35,14 +35,14 @@ ajustes.
 - Transporte: a resposta chegou com `<`, `>` e `&` como entidades HTML, que
   foram decodificadas ao gravar `resposta_bruta.bend`.
 - Modularização posterior do projeto: a alteração, que só toca a busca, foi
-  copiada literalmente para `versions/v1/src/search.bend` (cópia de
-  `src/search.bend`), trocando apenas `Product` por `Stock.Product`, o nome do
+  copiada literalmente para `v1/src/search.bend` (cópia de
+  `v0/src/search.bend`), trocando apenas `Product` por `Stock.Product`, o nome do
   tipo importado no módulo.
 
-## Adaptação das provas (`versions/v1/PROOF.bend`)
+## Adaptação das provas (`v1/PROOF.bend`)
 
 O `PROOF.bend` da v0 é rejeitado na v1 em `upd_accept` (prova de P1). Para
 separar violação de prova a adaptar, foram removidos `upd_accept` e os lemas da
 conservação (P2), e P1 e P2 ficaram como `?TODO`; o restante é cópia literal da
 v0 e continua aceito. Que P1 e P2 são falsas na v1 é mostrado pelos
-contraexemplos `checks/sold_out_p1.bend` e `checks/sold_out_p2.bend`.
+contraexemplos `v1/sold_out_p1.bend` e `v1/sold_out_p2.bend`.

@@ -1,5 +1,4 @@
-# Lemas genéricos usados pelas provas (PROOF.bend, versions/v1/PROOF.bend e
-# checks/). Não dependem da parte do código que a v1 alterou.
+# Lemas genéricos usados pelas provas. Iguais na v0 e na v1.
 
 import Base
 import ./src/stock.bend as Stock

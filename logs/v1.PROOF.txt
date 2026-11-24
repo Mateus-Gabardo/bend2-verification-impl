@@ -1,19 +1,5 @@
-$ bend PROOF.bend    # build/v1
+$ bend PROOF.bend    # pasta v1
 SOME PROOFS FAIL
-Error:
-- expected : Some{Stock.Product{i, m, Nat.add(h, 1n+q)} <> rest}
-- observed : Some{Search.keep_if_stocked.go(i, m, Nat.add(h, 1n+q), rest)}
-Context:
-- i    : Nat
-- ok   : Unit
-- q    : Nat
-- m    : Nat
-- h    : Nat
-- rest : List<&2, Stock.Product>
-Location: upd_accept
-51 |         : Maybe<&2, List<&2, Stock.Product>>}
-52>|       {==}
-   |       ^^^^
-53 |     case Stock.Product{j, a, hh} <> t:
-Note: the left side of the equality is the expected, the right side is the observed.
+Error: 2 TODOs found.
+The code is incomplete, and not a valid proof yet.
 exit=1

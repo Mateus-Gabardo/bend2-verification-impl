@@ -1,11 +1,9 @@
-# Definições auxiliares usadas pelas leis de LAWS.bend; não fazem parte do
-# programa. Mantenha este arquivo e LAWS.bend inalterados ao reescrever
-# main.bend ou PROOF.bend (inclusive na versão gerada pela LLM).
+# Definições usadas só para escrever as leis (não fazem parte do programa).
 
 import Base
 import ./src/stock.bend as Stock
 
-# Distinct(a, b): Unit quando a e b são naturais diferentes, Empty quando iguais
+# a e b são diferentes?
 def Distinct(a: Nat, b: Nat) -> Data:
   match a b:
     case 0n 0n:
@@ -17,7 +15,7 @@ def Distinct(a: Nat, b: Nat) -> Data:
     case 1n+a1 1n+b1:
       Distinct(a1, b1)
 
-# Absent(i, xs): nenhum produto de xs tem o identificador i
+# nenhum produto de xs tem o identificador i
 def Absent(i: Nat, xs: List<&2, Stock.Product>) -> Type:
   match xs:
     case Nil{}:
@@ -25,7 +23,7 @@ def Absent(i: Nat, xs: List<&2, Stock.Product>) -> Type:
     case Stock.Product{j, a, h} <> t:
       (Distinct(j, i) & Absent(i, t))
 
-# soma de disponível e reservado de todos os produtos da lista
+# soma de disponível + reservado de todos os produtos
 def total(xs: List<&2, Stock.Product>) -> Nat:
   match xs:
     case Nil{}:
@@ -33,7 +31,7 @@ def total(xs: List<&2, Stock.Product>) -> Nat:
     case Stock.Product{j, a, h} <> t:
       Nat.add(Nat.add(a, h), total(t))
 
-# o estoque devolvido, seja a reserva aceita ou recusada
+# o estoque devolvido, aceita ou recusada
 def stock_of(r: Stock.Outcome) -> List<&2, Stock.Product>:
   match r:
     case Stock.Accepted{s}:
@@ -41,6 +39,6 @@ def stock_of(r: Stock.Outcome) -> List<&2, Stock.Product>:
     case Stock.Refused{s}:
       s
 
-# estoque de exemplo usado pelos testes unitários
+# estoque usado pelos testes T1-T5
 def sample() -> List<&2, Stock.Product>:
   [Stock.Product{7n, 10n, 2n}, Stock.Product{8n, 5n, 0n}]

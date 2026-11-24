@@ -1,16 +1,5 @@
-# Ponto cego dos testes unitários: um teste que não esgota o produto não
-# distingue a v1 da v0.
-#
-# Na v0, P1 descreve o resultado de toda reserva aceita, e P3, P4 e P5 o de toda
-# recusa. Este arquivo prova, para a versão montada, a lei P1 restrita ao caso
-# em que o produto NÃO esgota (sobra 1+m unidades). Como a v1 também prova
-# P3, P4 e P5 (versions/v1/PROOF.bend), a v1 dá exatamente o mesmo resultado
-# que a v0 em todo pedido, exceto quando o pedido é igual ao disponível.
-# Logo, todo teste unitário que não esgota um produto passa nas duas versões,
-# como T1-T5 passam. Só um teste do caso esgotado (checks/sold_out_p1.bend)
-# detecta a alteração.
-#
-#   esperado na v0 e na v1: ALL PROOFS CHECK
+# Ponto cego dos testes: fora do caso esgotado, a v1 dá o mesmo resultado
+# que a v0 (P1 sem esgotar o produto). Passa na v0 e na v1.
 
 import Base
 import ./src/stock.bend as Stock

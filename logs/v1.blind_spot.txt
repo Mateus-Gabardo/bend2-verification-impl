@@ -1,4 +1,4 @@
-$ bend blind_spot.bend    # build/v1
+$ bend blind_spot.bend    # pasta v1
 ALL PROOFS CHECK
 Use --verdict for mathematical validity.
 exit=0

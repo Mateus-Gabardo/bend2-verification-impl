@@ -1,10 +1,6 @@
-# PROOF.bend da v0 ADAPTADO à v1 (registrado em llm/prompt.md):
-#   - removidos upd_accept (P1) e os lemas da conservação (P2), que dependem
-#     de put_head manter o produto atualizado na lista;
-#   - P1 e P2 ficam abertas (?TODO): são FALSAS na v1 (checks/sold_out_*.bend);
-#   - o restante é cópia literal da v0 e continua aceito (P3, P4, P5, T1-T5).
-#
-#   esperado: SOME PROOFS FAIL / 2 TODOs found
+# Provas da v1: cópia das provas da v0, sem as de P1 e P2,
+# que são falsas na v1 (ver sold_out_p1.bend e sold_out_p2.bend).
+#   bend PROOF.bend   -> 2 TODOs found (P1 e P2); o resto é aceito
 
 import Base
 import ./src/stock.bend as Stock
@@ -100,11 +96,11 @@ def Laws.t4_refuse_zero():
 def Laws.t5_refuse_missing():
   {==}
 
-# P1: FALSA na v1 (contraexemplo: checks/sold_out_p1.bend)
+# P1: falsa na v1
 def Laws.accept_updates(pre, i, ok, q, m, h, rest):
   ?TODO
 
-# P2: FALSA na v1 (contraexemplo: checks/sold_out_p2.bend)
+# P2: falsa na v1
 def Laws.conserve_total(s, i, q):
   ?TODO
 

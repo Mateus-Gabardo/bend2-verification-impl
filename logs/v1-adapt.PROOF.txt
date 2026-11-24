@@ -1,5 +1,0 @@
-$ bend PROOF.bend    # build/v1-adapt
-SOME PROOFS FAIL
-Error: 2 TODOs found.
-The code is incomplete, and not a valid proof yet.
-exit=1
