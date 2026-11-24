@@ -1,13 +1,21 @@
 # Reserva de estoque em Bend 2
 
 Implementação do artigo *Características Funcionais na Verificação de
-Propriedades em Bend 2* (UTFPR, SE4FP/CBSoft 2026).
+Propriedades em Bend 2*, de Mateus Gabardo Lemos e Adolfo Gustavo Serra Seca
+Neto (UTFPR, SE4FP/CBSoft 2026). O texto do artigo e a apresentação estão em
+[bend2-verification](https://github.com/Mateus-Gabardo/bend2-verification).
+
+O artigo investiga em que medida as características funcionais do Bend 2
+(funções puras, imutabilidade, casamento de padrões, recursão e funções como
+parâmetro) permitem especificar e verificar propriedades de uma função quando
+sua implementação é alterada. Este repositório contém o estudo de caso que
+sustenta essa análise.
 
 Uma função de reserva de estoque é escrita em Bend 2, e o que ela deve fazer é
 declarado como **leis**: cinco propriedades gerais (P1-P5), que valem para
 qualquer entrada, e cinco testes unitários (T1-T5), cada um com uma entrada
 fixa. Depois, uma IA altera a função com um erro de propósito, e as mesmas leis
-são verificadas de novo.
+são verificadas de novo: os testes continuam passando, mas P1 e P2 falham.
 
 ## As duas versões
 
